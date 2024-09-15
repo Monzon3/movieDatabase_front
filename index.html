@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Fistful of movies</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js" defer></script> 
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>A Fistful of movies</h1>
+    </header>
+    <section id="user-goal">
+      <h2>Search fields</h2>
+      <p>Title</p>
+      <input type="text" id="titleIn" v-model="title"/>
+      <p>Original Title</p>
+      <input type="text" id="origTitleIn" v-model="origTitle"/>
+      <p>Storage Device</p>
+      <p>Quality</p>
+      <p>Audio language</p>
+      <input type="text" id="audioIn" v-model="audio"/>
+      <p>Subtitles language</p>
+      <input type="text" id="subsIn" v-model="subs"/>
+      <p>Year</p>
+      <input type="text" id="yearIn" v-model="year"/>
+      <p>Country</p>
+      <p>Length</p>
+      <p>Director</p>
+      <input type="text" id="directorIn" v-model="director"/>
+      <p>{{search_query()}}</p>
+      <button v-on:click="search">Search</button>
+    </section>
+  </body>
+</html>
