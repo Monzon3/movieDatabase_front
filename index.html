@@ -16,25 +16,43 @@
     <header>
       <h1>A Fistful of movies</h1>
     </header>
-    <section id="user-goal">
+    <section id="query">
       <h2>Search fields</h2>
-      <p>Title</p>
-      <input type="text" id="titleIn" v-model="title"/>
+      <p>Title</p> <input type="text" id="titleIn" v-model="title"/>
       <p>Original Title</p>
       <input type="text" id="origTitleIn" v-model="origTitle"/>
       <p>Storage Device</p>
+      <form>
+        <select id="storage" v-model="storage">
+          <option value="Disco duro 1">Disco duro 1</option>
+          <option value="Disco duro 2">Disco duro 2</option>
+        </select>
+      </form>
       <p>Quality</p>
+      <form>
+        <select id="quality" v-model="quality">
+          <option value="hd1080">HD1080p</option>
+          <option value="hd720">HD720p</option>
+        </select>
+      </form>
       <p>Audio language</p>
       <input type="text" id="audioIn" v-model="audio"/>
       <p>Subtitles language</p>
       <input type="text" id="subsIn" v-model="subs"/>
       <p>Year</p>
-      <input type="text" id="yearIn" v-model="year"/>
+      <input type="text" id="year1In" v-model="year1"/>
+      <input type="text" id="year2In" v-model="year2"/>
       <p>Country</p>
+      <form>
+        <select id="country" v-model="country">
+          <option value="Italy">Italy</option>
+          <option value="Spain">Spain</option>
+        </select>
+      </form>
       <p>Length</p>
       <p>Director</p>
       <input type="text" id="directorIn" v-model="director"/>
-      <p>{{search_query()}}</p>
+      <p>{{search_query}}</p>
       <button v-on:click="search">Search</button>
     </section>
   </body>

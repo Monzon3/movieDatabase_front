@@ -1,22 +1,29 @@
 const app = Vue.createApp({
     data() {
         return {
-            title: '',
-            origTitle: '',
             audio: '',
+            director: '',
+            country: '',
+            origTitle: '',
+            quality: '',
+            storage: '',
+            title: '',
             subs: '',
-            year: '',
-            director: ''
+            year1: '',
+            year2: '',
+            search_query: ''
         };
     },
     methods: {
-        search_query() {
+        search() {
             let query = "Buscando: ";
-            query = query + this.title + " / " + this.origTitle + " [" + 
-                    this.audio + "; " + this.subs + "] (" + this.year + ") / " + this.director;
-            return query;
+            query = query + this.title + " / " + this.origTitle + " [" + this.quality 
+            + "] " + "in " + this.storage + " [" + this.audio + "; " + this.subs + "] in (" 
+            + this.year1 + "-" + this.year2 + ") by " + this.director + " (" + this.country
+            + ")";
+            this.search_query = query;
         }
     }
 });
 
-app.mount('#user-goal');
+app.mount('#query');
