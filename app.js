@@ -15,6 +15,19 @@ const app = Vue.createApp({
         };
     },
     methods: {
+        clearQuery() {
+            this.audio = '',
+            this.director = '',
+            this.country = '',
+            this.origTitle = '',
+            this.quality = '',
+            this.storage = '',
+            this.title = '',
+            this.subs = '',
+            this.year1 = '',
+            this.year2 = '',
+            this.search_query = ''   
+        },
         search() {
             let query = "Buscando: ";
             query = query + this.title + " / " + this.origTitle + " [" + this.quality 

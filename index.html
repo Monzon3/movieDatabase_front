@@ -18,7 +18,8 @@
     </header>
     <section id="query">
       <h2>Search fields</h2>
-      <p>Title</p> <input type="text" id="titleIn" v-model="title"/>
+      <p>Title</p> 
+      <input type="text" id="titleIn" v-model="title"/>
       <p>Original Title</p>
       <input type="text" id="origTitleIn" v-model="origTitle"/>
       <p>Storage Device</p>
@@ -54,6 +55,7 @@
       <input type="text" id="directorIn" v-model="director"/>
       <p>{{search_query}}</p>
       <button v-on:click="search">Search</button>
+      <button v-on:click="clearQuery">Clean</button>
     </section>
   </body>
 </html>
